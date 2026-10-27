@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports - TrustTag AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ TrustTag AI
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="verify.html">Verify</a>
+            <a href="report.html">Report</a>
+            <a href="reports.html">Reports</a>
+        </div>
+
+    </nav>
+
+
+    <!-- REPORTS PAGE -->
+    <main class="verify-page">
+
+        <div class="verification-container">
+
+            <div class="verification-card">
+
+                <h1>📋 Product Reports</h1>
+
+                <p class="subtitle">
+                    View and manage suspicious product reports.
+                </p>
+
+
+                <!-- SUMMARY -->
+
+                <div class="reports-summary">
+
+                    <div class="summary-card">
+                        <span>📋</span>
+                        <h2 id="totalReports">3</h2>
+                        <p>Total Reports</p>
+                    </div>
+
+                    <div class="summary-card">
+                        <span>⏳</span>
+                        <h2 id="pendingReports">2</h2>
+                        <p>Pending</p>
+                    </div>
+
+                    <div class="summary-card">
+                        <span>✅</span>
+                        <h2 id="resolvedReports">1</h2>
+                        <p>Resolved</p>
+                    </div>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="reports-search">
+
+                    <input
+                        type="text"
+                        id="searchReport"
+                        placeholder="🔍 Search by Product ID or Report ID"
+                    >
+
+                </div>
+
+
+                <!-- REPORT LIST -->
+
+                <div id="reportsList">
+
+
+                    <!-- REPORT 1 -->
+
+                    <div
+                        class="report-item"
+                        data-search="TT1001 RPT001"
+                    >
+
+                        <div class="report-top">
+
+                            <div>
+                                <h3>
+                                    🚨 Product TT-1001
+                                </h3>
+
+                                <p>
+                                    Report ID: RPT-001
+                                </p>
+                            </div>
+
+                            <span class="report-status pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+                        <p class="report-description">
+                            Suspicious product detected by user.
+                        </p>
+
+                        <div class="report-details">
+
+                            <span>
+                                📅 27 August 2026
+                            </span>
+
+                            <span>
+                                ⚠️ Suspicious
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- REPORT 2 -->
+
+                    <div
+                        class="report-item"
+                        data-search="TT2045 RPT002"
+                    >
+
+                        <div class="report-top">
+
+                            <div>
+                                <h3>
+                                    ⚠️ Product TT-2045
+                                </h3>
+
+                                <p>
+                                    Report ID: RPT-002
+                                </p>
+                            </div>
+
+                            <span class="report-status pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+                        <p class="report-description">
+                            QR code verification failed.
+                        </p>
+
+                        <div class="report-details">
+
+                            <span>
+                                📅 26 August 2026
+                            </span>
+
+                            <span>
+                                🔍 Verification Failed
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- REPORT 3 -->
+
+                    <div
+                        class="report-item"
+                        data-search="TT3090 RPT003"
+                    >
+
+                        <div class="report-top">
+
+                            <div>
+                                <h3>
+                                    ✅ Product TT-3090
+                                </h3>
+
+                                <p>
+                                    Report ID: RPT-003
+                                </p>
+                            </div>
+
+                            <span class="report-status resolved">
+                                Resolved
+                            </span>
+
+                        </div>
+
+                        <p class="report-description">
+                            Product investigation completed successfully.
+                        </p>
+
+                        <div class="report-details">
+
+                            <span>
+                                📅 25 August 2026
+                            </span>
+
+                            <span>
+                                ✅ Verified
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- NO RESULTS -->
+
+                <div
+                    id="noReports"
+                    class="result"
+                    style="display:none;"
+                >
+                    <div class="error-result">
+                        <p>
+                            No matching reports found.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="reports-actions">
+
+                    <a
+                        href="report.html"
+                        class="verify-btn report-link"
+                    >
+                        🚨 Submit New Report
+                    </a>
+
+                    <a
+                        href="dashboard.html"
+                        class="back-button"
+                    >
+                        📊 Back to Dashboard
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 TrustTag AI. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const searchInput =
+            document.getElementById("searchReport");
+
+        const reportItems =
+            document.querySelectorAll(".report-item");
+
+        const noReports =
+            document.getElementById("noReports");
+
+
+        searchInput.addEventListener(
+            "input",
+            function () {
+
+                const searchValue =
+                    searchInput.value
+                        .toLowerCase()
+                        .trim();
+
+                let visibleReports = 0;
+
+
+                reportItems.forEach(
+                    function (report) {
+
+                        const searchText =
+                            report
+                                .getAttribute("data-search")
+                                .toLowerCase();
+
+
+                        if (
+                            searchText.includes(
+                                searchValue
+                            )
+                        ) {
+
+                            report.style.display =
+                                "block";
+
+                            visibleReports++;
+
+                        }
+
+                        else {
+
+                            report.style.display =
+                                "none";
+
+                        }
+
+                    }
+                );
+
+
+                if (visibleReports === 0) {
+
+                    noReports.style.display =
+                        "block";
+
+                }
+
+                else {
+
+                    noReports.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

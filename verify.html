@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verify Product - TrustTag AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- QR / Barcode Scanner Library -->
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            🛡️ TrustTag AI
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="verify.html">Verify</a>
+        </div>
+    </nav>
+
+
+    <!-- VERIFY SECTION -->
+    <main class="verify-page">
+
+        <div class="verification-container">
+
+            <div class="verification-card">
+
+                <h1>🔍 Verify Product</h1>
+
+                <p class="subtitle">
+                    Scan the product QR code or barcode to check
+                    whether the product is genuine.
+                </p>
+
+
+                <!-- SCANNER BUTTON -->
+                <button class="scan-btn" id="startScan">
+                    📷 Start Scanning
+                </button>
+
+
+                <!-- SCANNER AREA -->
+                <div id="scannerArea" class="scanner-area">
+
+                    <h2>📷 QR / Barcode Scanner</h2>
+
+                    <div id="reader"></div>
+
+                    <p id="scanStatus">
+                        Camera scanner ready
+                    </p>
+
+                    <button id="stopScan" class="stop-btn">
+                        Stop Scanner
+                    </button>
+
+                </div>
+
+
+                <!-- MANUAL PRODUCT ID -->
+                <div class="manual-section">
+
+                    <h2>Enter Product ID</h2>
+
+                    <p>
+                        Enter the unique Product ID printed on the product.
+                    </p>
+
+                    <input
+                        type="text"
+                        id="productId"
+                        placeholder="Enter Product ID"
+                    >
+
+                    <button id="verifyProduct" class="verify-btn">
+                        🔎 Verify Product
+                    </button>
+
+                </div>
+
+
+                <!-- RESULT -->
+                <div id="result" class="result"></div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 TrustTag AI. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

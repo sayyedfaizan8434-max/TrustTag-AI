@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Report Product - TrustTag AI</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ TrustTag AI
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="verify.html">
+                Verify
+            </a>
+
+            <a href="report.html">
+                Report
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- REPORT PAGE -->
+
+    <main class="verify-page">
+
+        <div class="verification-container">
+
+            <div class="verification-card">
+
+                <h1>
+                    ⚠️ Report a Product
+                </h1>
+
+
+                <p class="subtitle">
+
+                    Help us identify fake or suspicious
+                    products.
+
+                </p>
+
+
+
+                <!-- PRODUCT ID -->
+
+                <div class="manual-section">
+
+                    <h2>
+                        Product ID
+                    </h2>
+
+                    <p>
+                        Enter the Product ID of the
+                        suspicious product.
+                    </p>
+
+
+                    <input
+                        type="text"
+                        id="reportProductId"
+                        placeholder="Enter Product ID"
+                    >
+
+
+
+                    <!-- REASON -->
+
+                    <h2 style="margin-top:25px;">
+                        Reason
+                    </h2>
+
+
+                    <select
+                        id="reportReason"
+                        style="
+                            width:100%;
+                            padding:14px;
+                            margin-top:10px;
+                            border:1px solid #ccc;
+                            border-radius:8px;
+                            font-size:16px;
+                        "
+                    >
+
+                        <option value="">
+                            Select Reason
+                        </option>
+
+                        <option value="Fake Product">
+                            Fake Product
+                        </option>
+
+                        <option value="Invalid QR Code">
+                            Invalid QR Code
+                        </option>
+
+                        <option value="Wrong Product Details">
+                            Wrong Product Details
+                        </option>
+
+                        <option value="Expired Product">
+                            Expired Product
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+
+
+                    <!-- DESCRIPTION -->
+
+                    <h2 style="margin-top:25px;">
+                        Description
+                    </h2>
+
+
+                    <textarea
+                        id="reportDescription"
+                        placeholder="Describe the problem"
+                        rows="5"
+                        style="
+                            width:100%;
+                            padding:14px;
+                            margin-top:10px;
+                            border:1px solid #ccc;
+                            border-radius:8px;
+                            font-size:16px;
+                            resize:vertical;
+                        "
+                    ></textarea>
+
+
+
+                    <!-- SUBMIT BUTTON -->
+
+                    <button
+                        type="button"
+                        id="submitReport"
+                        class="verify-btn"
+                    >
+
+                        🚨 Submit Report
+
+                    </button>
+
+
+
+                    <!-- RESULT -->
+
+                    <div
+                        id="reportResult"
+                        class="result"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 TrustTag AI. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - TrustTag AI</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ TrustTag AI
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="verify.html">
+                Verify
+            </a>
+
+            <a href="report.html">
+                Report
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- DASHBOARD -->
+
+    <main class="dashboard-page">
+
+        <div class="dashboard-container">
+
+
+            <!-- HEADER -->
+
+            <div class="dashboard-header">
+
+                <div>
+
+                    <h1>
+                        📊 Dashboard
+                    </h1>
+
+                    <p>
+                        Welcome back, Admin!
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="logoutButton"
+                    class="logout-btn"
+                >
+                    🚪 Logout
+                </button>
+
+            </div>
+
+
+
+            <!-- STAT CARDS -->
+
+            <div class="dashboard-stats">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🔍
+                    </div>
+
+                    <h2>
+                        25
+                    </h2>
+
+                    <p>
+                        Total Verifications
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ✅
+                    </div>
+
+                    <h2>
+                        20
+                    </h2>
+
+                    <p>
+                        Genuine Products
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ⚠️
+                    </div>
+
+                    <h2>
+                        5
+                    </h2>
+
+                    <p>
+                        Suspicious Products
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🚨
+                    </div>
+
+                    <h2>
+                        3
+                    </h2>
+
+                    <p>
+                        Total Reports
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="dashboard-card">
+
+                <h2>
+                    ⚡ Quick Actions
+                </h2>
+
+                <p>
+                    Select an option to continue.
+                </p>
+
+
+                <div class="action-grid">
+
+
+                    <a
+                        href="verify.html"
+                        class="action-card"
+                    >
+
+                        <span>
+                            🔍
+                        </span>
+
+                        <strong>
+                            Verify Product
+                        </strong>
+
+                        <small>
+                            Check product authenticity
+                        </small>
+
+                    </a>
+
+
+
+                    <a
+                        href="verify.html"
+                        class="action-card"
+                    >
+
+                        <span>
+                            📷
+                        </span>
+
+                        <strong>
+                            Scan QR / Barcode
+                        </strong>
+
+                        <small>
+                            Scan a product code
+                        </small>
+
+                    </a>
+
+
+
+                    <a
+                        href="report.html"
+                        class="action-card"
+                    >
+
+                        <span>
+                            🚨
+                        </span>
+
+                        <strong>
+                            Report Product
+                        </strong>
+
+                        <small>
+                            Report a suspicious product
+                        </small>
+
+                    </a>
+
+
+
+                    <a
+                        href="reports.html"
+                        class="action-card"
+                    >
+
+                        <span>
+                            📋
+                        </span>
+
+                        <strong>
+                            View Reports
+                        </strong>
+
+                        <small>
+                            Check submitted reports
+                        </small>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECENT ACTIVITY -->
+
+            <div class="dashboard-card">
+
+                <h2>
+                    🕒 Recent Activity
+                </h2>
+
+
+                <div class="activity-item">
+
+                    <span>
+                        ✅
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Product Verified
+                        </strong>
+
+                        <p>
+                            TRUST123 was verified as genuine.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <span>
+                        ⚠️
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Suspicious Product
+                        </strong>
+
+                        <p>
+                            Product ABC456 requires attention.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-item">
+
+                    <span>
+                        🚨
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            New Report
+                        </strong>
+
+                        <p>
+                            A suspicious product report was submitted.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 TrustTag AI. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- DASHBOARD SCRIPT -->
+
+    <script>
+
+        // ==========================================
+        // LOGIN CHECK
+        // ==========================================
+
+        const loggedIn =
+            localStorage.getItem(
+                "trusttagAdminLoggedIn"
+            );
+
+
+        if (loggedIn !== "true") {
+
+            window.location.href =
+                "login.html";
+
+        }
+
+
+
+        // ==========================================
+        // LOGOUT
+        // ==========================================
+
+        const logoutButton =
+            document.getElementById(
+                "logoutButton"
+            );
+
+
+        logoutButton.addEventListener(
+            "click",
+            function () {
+
+                localStorage.removeItem(
+                    "trusttagAdminLoggedIn"
+                );
+
+
+                window.location.href =
+                    "login.html";
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
